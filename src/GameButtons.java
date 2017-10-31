@@ -47,8 +47,8 @@ public class GameButtons extends JPanel implements ActionListener {
      */
     public void NewGame() { 
         Collections.shuffle(btns);
-        for (JButton knapp : btns) {
-            add(knapp);
+        for (JButton btn : btns) {
+            add(btn);
         }
         revalidate();
     }
@@ -107,7 +107,7 @@ public class GameButtons extends JPanel implements ActionListener {
         for (JButton b : btns) {
             allNumbers += b.getText();
         }
-        if (allNumbers.equals("123456789101112131415")) {
+        if (allNumbers.trim().equals("123456789101112131415")) {
             JOptionPane.showMessageDialog(null, "Grattis, du vann!");
             won = true;
         } else {
