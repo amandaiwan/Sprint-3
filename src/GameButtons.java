@@ -62,7 +62,7 @@ public class GameButtons extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        JButton btn = (JButton) e.getSource(); // vad gör denna?
+        JButton btn = (JButton) e.getSource(); 
 
         int emptyIndex = 0; // tom index
         int currentIndex = 0; // nuvarande index
