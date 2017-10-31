@@ -25,11 +25,11 @@ public class GameGUI extends JFrame {
         setSize(700,700);
         setLocationRelativeTo(null);
         setVisible(true);
-        
-        // en anonym inner-klass
+   
         shuffleBtn.setForeground(Color.white);
         shuffleBtn.setBackground(Color.black);
         shuffleBtn.setFont(new Font("Arial", Font.BOLD, 50));
+         // en anonym inner-klass
         shuffleBtn.addActionListener((ActionEvent e) -> {
             gameButtons.NewGame();
         });
