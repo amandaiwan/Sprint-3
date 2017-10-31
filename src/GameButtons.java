@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 public class GameButtons extends JPanel implements ActionListener {
 
     protected List<JButton> btns = new ArrayList<>();
-    protected boolean won = false;
 
     public GameButtons() {
 
@@ -103,6 +102,7 @@ public class GameButtons extends JPanel implements ActionListener {
         }
         
        // kollar om man vunnit 
+        boolean won = false;
         String allNumbers = "";
         for (JButton b : btns) {
             allNumbers += b.getText();
