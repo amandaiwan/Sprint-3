@@ -67,21 +67,43 @@ public class GameButtons extends JPanel implements ActionListener {
 
         int emptyIndex = 0; // tom index
         int currentIndex = 0; // nuvarande index
-
+        int left = 0;
+        int right = 0;
+        int top = 0;
+        int bottom = 0;
+        
         for (int i = 0; i < btns.size(); i++) { 
             if (btns.get(i).getText().equals("")) { // returnerar elementet där inehållet är det samma med ""
                 emptyIndex = i; // då blir emptyIndex positionen i ArrayListan i.
 
             } else if (btns.get(i).getText().equals(btn.getText())) {
                 currentIndex = i;
-            }
+                left = currentIndex - 1; // Om det ska gå till vänster, blir flyttpositionen -1 
+                right = currentIndex + 1; // Om det ska gå till höger , blir flyttpositionen +1
+                top = currentIndex - 4; // Om det ska gå upp, blir flyttpositionen -4
+                bottom = currentIndex + 4;
+            
+            } else if (btns.get(3).getText().equals(btn.getText())) {
+                right = currentIndex - 1;
+            
+            } else if (btns.get(7).getText().equals(btn.getText())) {
+                right = currentIndex - 1;
+            
+            } else if (btns.get(11).getText().equals(btn.getText())) {
+                right = currentIndex - 1;
+            
+            } else if (btns.get(4).getText().equals(btn.getText())) {
+                left = currentIndex + 1;
+            
+            } else if (btns.get(8).getText().equals(btn.getText())) {
+                left = currentIndex + 1;
+            
+            } else if (btns.get(12).getText().equals(btn.getText())) {
+                left = currentIndex + 1;
+            }  
         }
 
-        int left = currentIndex - 1; // Om det ska gå till vänster, blir flyttpositionen -1 
-        int right = currentIndex + 1; // Om det ska gå till höger , blir flyttpositionen +1
-        int top = currentIndex - 4; // Om det ska gå upp, blir flyttpositionen -4
-        int bottom = currentIndex + 4; // Om det ska gå ner, blir flyttpositionen +4
-
+               
         if (emptyIndex == left || emptyIndex == right || emptyIndex == top
                 || emptyIndex == bottom) {
             JButton emptyBtn = btns.get(emptyIndex);
