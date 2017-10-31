@@ -29,6 +29,7 @@ public class GameGUI extends JFrame {
         shuffleBtn.setForeground(Color.white);
         shuffleBtn.setBackground(Color.black);
         shuffleBtn.setFont(new Font("Arial", Font.BOLD, 50));
+        
          // en anonym inner-klass
         shuffleBtn.addActionListener((ActionEvent e) -> {
             gameButtons.NewGame();
@@ -36,7 +37,7 @@ public class GameGUI extends JFrame {
     }
   
     public static void main(String[] args) {
-       GameGUI ett = new GameGUI();  // skapar en instans av klassen 
+       GameGUI g = new GameGUI();  // skapar en instans av klassen 
     }
     
 }
