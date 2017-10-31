@@ -57,7 +57,7 @@ public class GameButtons extends JPanel implements ActionListener {
      * Denna actionListner talar om för den tomma rutan att ersätta sitt värde
      * med rutan bredvid som användaren klickat på. Den talar även om ifall 
      * du har vunnit spelet beroende på vart komponenterna befinner sig.
-     * @param e nödvändig för att vi ska kunna "flytta" texten i knapparna. 
+     * @param e
      */
     @Override
     public void actionPerformed(ActionEvent e) {
