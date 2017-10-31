@@ -27,9 +27,7 @@ public class GameButtons extends JPanel implements ActionListener {
             btn.setForeground(Color.white);
             btn.setBackground(Color.black);
             btns.add(btn);
-            //setBackground(Color.ORANGE);
-            //setOpaque(true); för mac
-            btn.addActionListener(this);  // dedikerar en lyssnare, för knappen btn
+            btn.addActionListener(this); // dedikerar en lyssnare, för knappen btn
         }
         
         JButton emptyBtn = new JButton("");
@@ -45,7 +43,7 @@ public class GameButtons extends JPanel implements ActionListener {
 
     /**
      * Metoden NewGame gör att knapparna blandas om vid nytt spel. Detta gör
-     * vi med hjälp av Collection.shuffel. Revalidate begär att
+     * vi med hjälp av Collection.shuffel. Metoden revalidate begär att
      * barnkomponenterna placeras om.
      */
     public void NewGame() { 
@@ -55,7 +53,6 @@ public class GameButtons extends JPanel implements ActionListener {
         }
         revalidate();
     }
-
     
     /**
      * Denna actionListner talar om för den tomma rutan att ersätta sitt värde
