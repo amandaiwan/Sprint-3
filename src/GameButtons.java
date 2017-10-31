@@ -83,24 +83,17 @@ public class GameButtons extends JPanel implements ActionListener {
                 top = currentIndex - 4; 
                 bottom = currentIndex + 4;
             
-            } else if (btns.get(3).getText().equals(btn.getText())) {
-                right = currentIndex - 1;
+            } else if (btns.get(3).getText().equals(btn.getText()) 
+                    || btns.get(7).getText().equals(btn.getText()) 
+                    || btns.get(11).getText().equals(btn.getText())) {
+                    right = currentIndex - 1;
             
-            } else if (btns.get(7).getText().equals(btn.getText())) {
-                right = currentIndex - 1;
-            
-            } else if (btns.get(11).getText().equals(btn.getText())) {
-                right = currentIndex - 1;
-            
-            } else if (btns.get(4).getText().equals(btn.getText())) {
-                left = currentIndex + 1;
-            
-            } else if (btns.get(8).getText().equals(btn.getText())) {
-                left = currentIndex + 1;
-            
-            } else if (btns.get(12).getText().equals(btn.getText())) {
-                left = currentIndex + 1;
-            }  
+            } else if (btns.get(4).getText().equals(btn.getText()) 
+                    || btns.get(8).getText().equals(btn.getText()) 
+                    || btns.get(12).getText().equals(btn.getText())) {
+                    left = currentIndex + 1;
+                    
+            }
         }
    
         if (emptyIndex == left || emptyIndex == right || emptyIndex == top
