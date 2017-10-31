@@ -20,10 +20,10 @@ public class GameButtons extends JPanel implements ActionListener {
 
         setLayout(new GridLayout(4, 4));
 
-        for (int i = 1; i < 16; i++) { // Denna skapar alla knappar 0-16
+        for (int i = 1; i < 16; i++) { // Denna skapar alla knappar 1-16
             JButton btn = new JButton(String.valueOf(i));
             btn.setHorizontalAlignment(JButton.CENTER);
-            btn.setFont(new Font("Helvetica", Font.BOLD, 20));
+            btn.setFont(new Font("Arial", Font.BOLD, 30));
             btn.setForeground(Color.white);
             btn.setBackground(Color.black);
             btns.add(btn);
@@ -31,7 +31,7 @@ public class GameButtons extends JPanel implements ActionListener {
         }
         
         JButton emptyBtn = new JButton("");
-        emptyBtn.setFont(new Font("Helvetica", Font.BOLD, 20));
+        emptyBtn.setFont(new Font("Arial", Font.BOLD, 30));
         emptyBtn.setForeground(Color.white);
         emptyBtn.setBackground(Color.black);
         emptyBtn.addActionListener(this);
@@ -92,7 +92,6 @@ public class GameButtons extends JPanel implements ActionListener {
                     || btns.get(8).getText().equals(btn.getText()) 
                     || btns.get(12).getText().equals(btn.getText())) {
                     left = currentIndex + 1;
-                    
             }
         }
    
